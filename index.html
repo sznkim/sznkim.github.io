@@ -1,0 +1,806 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
+<meta name="googlebot" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
+<meta name="bingbot" content="noindex,nofollow,noarchive,nosnippet,noimageindex">
+<title>Seojin Kim</title>
+<style>
+:root{
+  --ink:#161a22;
+  --body:#3d4655;
+  --muted:#788395;
+  --line:#e4e8ee;
+  --pink:#c84e78;
+  --pink-dark:#a93661;
+  --pink-soft:#fff4f8;
+  --blue:#4b6483;
+  --max:1040px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--body);
+  background:#fff;
+  font-family:Georgia,"Times New Roman",serif;
+  font-size:16px;
+  line-height:1.62;
+}
+a{
+  color:var(--pink-dark);
+  text-decoration:none;
+}
+a:hover{
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+nav{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(255,255,255,.96);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(12px);
+}
+.nav-inner{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:14px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.brand{
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:16px;
+  font-weight:800;
+  letter-spacing:-.02em;
+}
+.nav-links{
+  display:flex;
+  gap:19px;
+}
+.nav-links a{
+  color:#566173;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12px;
+  font-weight:700;
+}
+main{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 22px;
+}
+.hero{
+  display:grid;
+  grid-template-columns:210px minmax(0,1fr);
+  gap:40px;
+  align-items:center;
+  padding:52px 0 38px;
+}
+.hero img{
+  width:210px;
+  height:262px;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:4px;
+  background:#eef1f4;
+}
+.eyebrow{
+  margin:0 0 7px;
+  color:var(--pink-dark);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+}
+h1,h2,h3,h4{
+  color:var(--ink);
+}
+h1{
+  margin:0 0 5px;
+  font-size:52px;
+  line-height:1;
+  font-weight:700;
+  letter-spacing:-.045em;
+}
+.subtitle{
+  margin:0 0 17px;
+  color:var(--blue);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:16px;
+  font-weight:650;
+}
+.hero p{
+  margin:0 0 9px;
+}
+.links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:13px;
+  margin-top:16px;
+}
+.links a{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:13px;
+  font-weight:750;
+}
+.section{
+  padding:34px 0;
+  border-top:1px solid var(--line);
+}
+.section h2{
+  margin:0 0 15px;
+  font-size:29px;
+  line-height:1.15;
+  letter-spacing:-.03em;
+}
+.lead{
+  max-width:830px;
+  margin:0 0 18px;
+}
+.signal-list{
+  margin:0;
+  padding-left:22px;
+}
+.signal-list li{
+  margin:7px 0;
+}
+.signal-list strong{
+  color:var(--pink-dark);
+}
+.skills-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0 34px;
+  margin-top:5px;
+}
+.skill{
+  display:grid;
+  grid-template-columns:118px 1fr;
+  gap:12px;
+  padding:10px 0;
+  border-bottom:1px solid #edf0f4;
+}
+.skill strong{
+  color:var(--pink-dark);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12.5px;
+}
+.skill span{
+  color:#4f5969;
+  font-size:14px;
+}
+.group{
+  margin-bottom:28px;
+}
+.group:last-child{
+  margin-bottom:0;
+}
+.group h3{
+  margin:0 0 7px;
+  padding-bottom:6px;
+  border-bottom:2px solid #ebb8cb;
+  color:var(--blue);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:16px;
+  letter-spacing:-.01em;
+}
+.paper{
+  display:grid;
+  grid-template-columns:34px minmax(0,1fr);
+  gap:13px;
+  padding:12px 0 13px;
+  border-bottom:1px solid #edf0f4;
+}
+.paper-number{
+  color:#d77d9e;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:11px;
+  font-weight:800;
+  padding-top:4px;
+}
+.paper h4{
+  margin:0 0 2px;
+  color:var(--pink-dark);
+  font-size:17px;
+  line-height:1.35;
+}
+.authors,.meta,.paper-links{
+  margin:2px 0;
+  font-size:13.5px;
+}
+.meta{
+  color:var(--muted);
+}
+.paper-links{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12.5px;
+  font-weight:650;
+}
+.timeline article{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:24px;
+  padding:11px 0;
+  border-bottom:1px solid #edf0f4;
+}
+.timeline h3{
+  margin:0 0 2px;
+  color:var(--blue);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:15.5px;
+}
+.timeline p{
+  margin:1px 0;
+  font-size:14px;
+}
+.timeline time{
+  color:var(--pink-dark);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:11.5px;
+  font-weight:800;
+  white-space:nowrap;
+}
+.small{
+  color:var(--muted);
+  font-size:12.5px!important;
+}
+footer{
+  padding:23px 0 42px;
+  color:var(--muted);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:11.5px;
+}
+@media(max-width:760px){
+  .nav-links{display:none}
+  .hero{
+    grid-template-columns:1fr;
+    gap:23px;
+    padding-top:34px;
+  }
+  .hero img{
+    width:175px;
+    height:220px;
+  }
+  h1{font-size:41px}
+  .skills-grid{grid-template-columns:1fr}
+  .timeline article{grid-template-columns:1fr;gap:2px}
+}
+
+/* Faculty-facing refinements */
+.hero{
+  padding-bottom:30px;
+}
+.hero-summary{
+  margin-top:15px;
+  padding-left:15px;
+  border-left:3px solid #e7adc2;
+  color:#303a49;
+  font-size:15px;
+}
+.signal-strip{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.signal{
+  padding:19px 18px;
+  border-right:1px solid var(--line);
+}
+.signal:last-child{border-right:0}
+.signal strong{
+  display:block;
+  margin-bottom:4px;
+  color:var(--pink-dark);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:20px;
+  line-height:1.08;
+  font-weight:800;
+}
+.signal span{
+  display:block;
+  color:var(--ink);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12px;
+  line-height:1.35;
+  font-weight:750;
+}
+.signal p{
+  margin:5px 0 0;
+  color:var(--muted);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:11px;
+  line-height:1.4;
+}
+.agenda-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px;
+}
+.agenda-item{
+  padding-top:13px;
+  border-top:3px solid #e8b1c5;
+}
+.agenda-item .tag{
+  margin:0 0 6px;
+  color:var(--pink-dark);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.agenda-item h3{
+  margin:0 0 7px;
+  font-size:18px;
+  line-height:1.3;
+}
+.agenda-item p{
+  margin:0;
+  color:var(--muted);
+  font-size:13px;
+}
+.featured{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px;
+  margin-bottom:25px;
+}
+.featured article{
+  padding:18px;
+  background:#fff8fb;
+  border:1px solid #f0d5df;
+  border-radius:5px;
+}
+.featured .label{
+  margin:0 0 6px;
+  color:var(--pink-dark);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+.featured h3{
+  margin:0 0 7px;
+  color:var(--ink);
+  font-size:17px;
+  line-height:1.3;
+}
+.featured p{
+  margin:0 0 7px;
+  color:#566173;
+  font-size:12.5px;
+}
+.featured .evidence{
+  color:var(--blue);
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:11.5px;
+  font-weight:750;
+}
+.paper-detail{
+  margin:5px 0 0;
+  color:#5f6978;
+  font-size:12.5px;
+}
+.paper-detail strong{
+  color:#394454;
+}
+.section-note{
+  margin:-5px 0 16px;
+  color:var(--muted);
+  font-size:13px;
+}
+@media(max-width:820px){
+  .signal-strip{grid-template-columns:repeat(2,1fr)}
+  .signal:nth-child(2){border-right:0}
+  .signal:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .agenda-grid,.featured{grid-template-columns:1fr}
+}
+@media(max-width:520px){
+  .signal-strip{grid-template-columns:1fr}
+  .signal{border-right:0;border-bottom:1px solid var(--line)}
+  .signal:last-child{border-bottom:0}
+}
+
+/* Final refinement: clear, compact, and academic */
+body{
+  font-family:"Avenir Next","Helvetica Neue",Arial,sans-serif;
+  font-size:15px;
+  line-height:1.55;
+  letter-spacing:-.008em;
+}
+h1,h2,h3,h4{
+  font-family:"Avenir Next","Helvetica Neue",Arial,sans-serif;
+}
+h1{
+  font-size:50px;
+  font-weight:760;
+  letter-spacing:-.05em;
+}
+.hero p{
+  max-width:790px;
+}
+.hero-summary{
+  border-left:0;
+  padding-left:0;
+  font-size:15.5px;
+}
+.research-fields{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:24px;
+}
+.research-field{
+  padding-top:13px;
+  border-top:3px solid #e8b1c5;
+}
+.research-field .field-label{
+  margin:0 0 6px;
+  color:var(--pink-dark);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.research-field h3{
+  margin:0 0 7px;
+  color:var(--ink);
+  font-size:18px;
+  line-height:1.28;
+}
+.research-field p{
+  margin:0;
+  color:var(--muted);
+  font-size:12.8px;
+}
+.news-list{
+  max-width:900px;
+}
+.news-item{
+  display:grid;
+  grid-template-columns:86px minmax(0,1fr);
+  gap:18px;
+  padding:8px 0;
+  border-bottom:1px solid #edf0f4;
+}
+.news-item time{
+  color:var(--pink-dark);
+  font-size:11.5px;
+  font-weight:800;
+}
+.news-item p{
+  margin:0;
+  font-size:13.5px;
+}
+.news-item strong{
+  color:var(--ink);
+}
+.featured{
+  margin-top:5px;
+}
+.featured article{
+  background:#fff;
+  border:0;
+  border-top:3px solid #efbdd0;
+  border-radius:0;
+  padding:14px 0 0;
+}
+.signal-strip{
+  margin-bottom:0;
+}
+@media(max-width:780px){
+  .research-fields{grid-template-columns:1fr}
+  .news-item{grid-template-columns:72px 1fr}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="#top">Seojin Kim</a>
+    <div class="nav-links">
+      <a href="#about">Research Interests</a>
+      <a href="#news">News</a>
+      <a href="#skills">Skills</a>
+      <a href="#research">Research</a>
+      <a href="#experience">Experience</a>
+      <a href="#presentations">Presentations</a>
+      <a href="#education">Education</a>
+      <a href="#awards">Awards</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<section id="top" class="hero">
+  <img src="assets/images/profile.jpg" alt="Seojin Kim">
+  <div>
+    <p class="eyebrow">Health Economics · Applied Microeconometrics · Health Policy</p>
+    <h1>Seojin Kim</h1>
+    <p class="subtitle">MPH Candidate, Seoul National University Graduate School of Public Health</p>
+    <p class="hero-summary">I am a health economics researcher studying how medical expenditure, family health shocks, and policy institutions shape healthcare use, insurance decisions, and household welfare. I combine longitudinal surveys and large-scale administrative data with applied microeconometric methods.</p>
+    <p>Previously, I worked in the World Bank Group’s Office of the Chief Economist for Infrastructure, supporting cross-country analyses of infrastructure stocks and the social rates of return on investment across more than 150 countries.</p>
+    <div class="links">
+      <a href="mailto:seojinkim@snu.ac.kr">Email</a>
+      <a href="assets/files/Seojin_Kim_CV.pdf" target="_blank">CV</a>
+      <a href="https://github.com/sznkim" target="_blank">GitHub</a>
+    </div>
+  </div>
+</section>
+
+<section class="signal-strip" aria-label="Selected academic signals">
+  <div class="signal">
+    <strong>APHA 2026</strong>
+    <span>Medical Care Student Paper Award Session</span>
+    <p>Selected oral presentation on medical expenditure burden and health investment.</p>
+  </div>
+  <div class="signal">
+    <strong>150+ countries</strong>
+    <span>World Bank cross-country research</span>
+    <p>Infrastructure stocks, investment returns, municipal finance, and geospatial analysis.</p>
+  </div>
+  <div class="signal">
+    <strong>Machine learning</strong>
+    <span>SNU AI Research Institute</span>
+    <p>Machine learning with linked health insurance and social security records for dementia and long-term care research.</p>
+  </div>
+  <div class="signal">
+    <strong>RN + MPH</strong>
+    <span>Clinical and economic perspective</span>
+    <p>Nursing training combined with health economics, policy evaluation, and data science.</p>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <h2>Research Interests</h2>
+  <p class="lead">My research combines health economics, applied microeconometrics, and machine learning to study healthcare use, financial protection, insurance behavior, and long-term care.</p>
+  <div class="research-fields">
+    <article class="research-field">
+      <p class="field-label">Health Economics</p>
+      <h3>Medical Expenditure and Financial Protection</h3>
+      <p>Medical expenditure burden, preventive healthcare use, catastrophic health expenditure, recovery, and recurrence.</p>
+    </article>
+    <article class="research-field">
+      <p class="field-label">Applied Microeconometrics</p>
+      <h3>Insurance, Family Health, and Labor Supply</h3>
+      <p>Longitudinal analyses of insurance decisions, family health shocks, work conditions, and parental labor supply.</p>
+    </article>
+    <article class="research-field">
+      <p class="field-label">Machine Learning & Administrative Data</p>
+      <h3>Dementia and Long-Term Care</h3>
+      <p>Machine learning and policy evaluation using linked health insurance and social security administrative records.</p>
+    </article>
+  </div>
+</section>
+
+
+<section id="news" class="section">
+  <h2>News</h2>
+  <div class="news-list">
+    <div class="news-item">
+      <time>Jul 2026</time>
+      <p>Started as a <strong>Machine Learning Research Intern</strong> at the Seoul National University AI Research Institute.</p>
+    </div>
+    <div class="news-item">
+      <time>Jul 2026</time>
+      <p>Selected for the <strong>APHA Medical Care Section Student Paper Award Session</strong> for “Financial Burden and Health Investment Decisions.”</p>
+    </div>
+    <div class="news-item">
+      <time>Jun 2026</time>
+      <p>Completed a research assistantship in the <strong>World Bank Group’s Office of the Chief Economist for Infrastructure</strong>.</p>
+    </div>
+    <div class="news-item">
+      <time>May 2026</time>
+      <p>Received an award in the <strong>Healthcare AI Reinsurance Competition</strong> organized by Samsung Fire & Marine, POSTECH, and SNU AI.</p>
+    </div>
+    <div class="news-item">
+      <time>2024</time>
+      <p>Received the <strong>Excellence Award</strong> in the SNU BK21 Student Paper Competition.</p>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section">
+  <h2>Skills & Methods</h2>
+  <div class="skills-grid">
+    <div class="skill"><strong>Programming</strong><span>Stata, R, Python, SAS, SQL</span></div>
+    <div class="skill"><strong>Econometrics</strong><span>Panel data, difference-in-differences, event studies, survival analysis</span></div>
+    <div class="skill"><strong>Data</strong><span>Longitudinal surveys, administrative claims, social security records, geospatial data</span></div>
+    <div class="skill"><strong>Research</strong><span>Policy evaluation, economic evaluation, systematic review, complex surveys</span></div>
+  </div>
+</section>
+
+<section id="research" class="section">
+  <h2>Research</h2>
+  <p class="section-note">Selected projects are highlighted first; the complete research portfolio follows below.</p>
+
+  <div class="featured">
+    <article>
+      <p class="label">Flagship Project · MEPS</p>
+      <h3>Financial Burden and Health Investment Decisions</h3>
+      <p>Within-person analysis of how medical expenditure burden changes preventive healthcare use and health behaviors.</p>
+      <p class="evidence">APHA Medical Care Student Paper Award Session, 2026</p>
+    </article>
+    <article>
+      <p class="label">Machine Learning · Administrative Data</p>
+      <h3>Dementia and Long-Term Care Access</h3>
+      <p>Linked health insurance and social security records to evaluate formal care access and substitution with hospital care.</p>
+      <p class="evidence">Machine learning research at SNU AI Research Institute</p>
+    </article>
+    <article>
+      <p class="label">Causal Inference · KLoSA</p>
+      <h3>Spousal Hospitalization and Private Insurance</h3>
+      <p>Stacked difference-in-differences analysis of insurance responses to family health shocks.</p>
+      <p class="evidence">Longitudinal data, 2006–2024</p>
+    </article>
+  </div>
+
+
+  <div class="group">
+    <h3>Current Research</h3>
+
+    <article class="paper">
+      <div class="paper-number">01</div>
+      <div>
+        <h4>Financial Burden and Health Investment Decisions: Panel Evidence from U.S. Households</h4>
+        <p class="authors"><strong>Seojin Kim</strong></p>
+        <p class="meta">APHA Medical Care Section Student Paper Award Session, 2026 · MEPS 1996–2023</p>
+        <p class="paper-links">[<a href="https://meps.ahrq.gov/mepsweb/" target="_blank">data</a>] [conference presentation]</p>
+      </div>
+    </article>
+
+    <article class="paper">
+      <div class="paper-number">02</div>
+      <div>
+        <h4>Recovery and Recurrence after Catastrophic Health Expenditure</h4>
+        <p class="authors"><strong>Seojin Kim</strong></p>
+        <p class="meta">Korea Health Panel 2011–2018 · Discrete-time survival analysis</p>
+        <p class="paper-links">[<a href="https://www.kihasa.re.kr/khp/en/" target="_blank">data</a>] [manuscript in preparation]</p>
+      </div>
+    </article>
+
+    <article class="paper">
+      <div class="paper-number">03</div>
+      <div>
+        <h4>Spousal Hospitalization and Private Insurance Decisions</h4>
+        <p class="authors"><strong>Seojin Kim</strong></p>
+        <p class="meta">KLoSA 2006–2024 · Stacked difference-in-differences</p>
+        <p class="paper-links">[<a href="https://survey.keis.or.kr/eng/klosa/klosa01.jsp" target="_blank">data</a>] [working paper]</p>
+      </div>
+    </article>
+
+    <article class="paper">
+      <div class="paper-number">04</div>
+      <div>
+        <h4>Dementia, Long-Term Care, and Policy Evaluation</h4>
+        <p class="authors"><strong>Seojin Kim</strong></p>
+        <p class="meta">Machine learning · Linked Korean health insurance and social security administrative records</p>
+        <p class="paper-links">[<a href="https://aiis.snu.ac.kr/" target="_blank">lab</a>] [ongoing project]</p>
+      </div>
+    </article>
+  </div>
+
+  <div class="group">
+    <h3>Working Papers</h3>
+
+    <article class="paper">
+      <div class="paper-number">05</div>
+      <div>
+        <h4>Impact of Earthquakes on Orthopedic Injury-related Hospital Admissions</h4>
+        <p class="authors"><strong>Seojin Kim</strong>, Huiyeon Lee, Sonoe Mashino, Seung Hwa Choo, Yoonkyung Lee</p>
+        <p class="meta">Systematic review of events with magnitude ≥6.5</p>
+        <p class="paper-links">[systematic review] [oral presentation]</p>
+      </div>
+    </article>
+
+    <article class="paper">
+      <div class="paper-number">06</div>
+      <div>
+        <h4>Fragmentation and Integration Challenges in Korean Pediatric Palliative Care</h4>
+        <p class="authors"><strong>Seojin Kim</strong>, Jackelyn Boyden, Sujeong Kim</p>
+        <p class="meta">Manuscript in preparation</p>
+        <p class="paper-links">[policy review] [poster presentation]</p>
+      </div>
+    </article>
+
+    <article class="paper">
+      <div class="paper-number">07</div>
+      <div>
+        <h4>Socioeconomic Inequalities in School Injuries</h4>
+        <p class="authors"><strong>Seojin Kim</strong></p>
+        <p class="meta">Mediation analysis of protective behaviors among children</p>
+      </div>
+    </article>
+  </div>
+
+  <div class="group">
+    <h3>Work in Progress</h3>
+
+    <article class="paper">
+      <div class="paper-number">08</div>
+      <div>
+        <h4>The Impact of Work Conditions on Unmet Healthcare Needs</h4>
+        <p class="authors"><strong>Seojin Kim</strong>, Susie Park, Sok Chul Hong</p>
+        <p class="paper-links">[<a href="https://www.kihasa.re.kr/khp/en/" target="_blank">data</a>]</p>
+      </div>
+    </article>
+
+    <article class="paper">
+      <div class="paper-number">09</div>
+      <div>
+        <h4>The Hidden Cost of Childhood Behavioral Problems: Child BPI and Parental Labor Supply</h4>
+        <p class="authors"><strong>Seojin Kim</strong>, Jasmine Xu</p>
+        <p class="paper-links">[<a href="https://psidonline.isr.umich.edu/" target="_blank">data</a>]</p>
+      </div>
+    </article>
+
+    <article class="paper">
+      <div class="paper-number">10</div>
+      <div>
+        <h4>Economic Evaluations of Real-Time Telehealth Interventions for Children and Adolescents</h4>
+        <p class="authors"><strong>Seojin Kim</strong>, Jimin Oh, Yeonji Jung, Youngsil Lee</p>
+        <p class="paper-links">[systematic review] [poster presentation]</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <h2>Professional Experience</h2>
+  <div class="timeline">
+    <article><div><h3>World Bank Group</h3><p>Research Assistant, Office of the Chief Economist for Infrastructure</p><p class="small">Cross-country infrastructure stocks, social rates of return, India Smart Cities Mission, Value of Lost Load, geospatial workflows, and Data360.</p></div><time>Sep 2025–Feb 2026</time></article>
+    <article><div><h3>Seoul National University AI Research Institute</h3><p>Machine Learning Research Intern</p><p class="small">Machine learning with linked administrative health data, focusing on dementia, long-term care, and scalable data processing.</p></div><time>Jul–Aug 2026</time></article>
+    <article><div><h3>Seoul National University Graduate School of Public Health</h3><p>Research Assistant, Pharmaceutical Patent Linkage System Evaluation</p></div><time>Apr–Jul 2025</time></article>
+  </div>
+</section>
+
+<section id="presentations" class="section">
+  <h2>Selected Presentations</h2>
+  <div class="timeline">
+    <article><div><h3>Financial Burden and Health Investment Decisions</h3><p>APHA Medical Care Section Student Paper Award Session · Oral presentation</p></div><time>2026</time></article>
+    <article><div><h3>Economic Evaluations of Telehealth Interventions for Children and Adolescents</h3><p>AUA Postgraduate Academic Forum · Invited poster</p></div><time>2025</time></article>
+    <article><div><h3>Systematic Review of Hospital Utilization after Earthquakes</h3><p>Korean Society of Emergency Medicine Annual Conference · Invited oral presentation</p></div><time>2024</time></article>
+    <article><div><h3>Policy Review of Pediatric Palliative Care in South Korea</h3><p>Asia Pacific Hospice Palliative Care Conference · Invited poster</p></div><time>2023</time></article>
+  </div>
+</section>
+
+<section id="education" class="section">
+  <h2>Education</h2>
+  <div class="timeline">
+    <article><div><h3>Seoul National University</h3><p>MPH, Healthcare Management and Policy · Health Economics concentration</p><p class="small">Advisor: Prof. Tae-Jin Lee</p></div><time>Expected Feb 2027</time></article>
+    <article><div><h3>The Catholic University of Korea</h3><p>BS in Nursing · Registered Nurse, Republic of Korea</p></div><time>Feb 2024</time></article>
+  </div>
+</section>
+
+<section id="awards" class="section">
+  <h2>Awards & Honors</h2>
+  <div class="timeline">
+    <article><div><h3>APHA Medical Care Section Student Paper Award Session</h3></div><time>2026</time></article>
+    <article><div><h3>Healthcare AI Reinsurance Competition Award</h3><p class="small">Samsung Fire & Marine · POSTECH · SNU AI</p></div><time>2026</time></article>
+    <article><div><h3>SNU BK21 Student Paper Competition</h3><p>2nd Place, Excellence Award</p></div><time>2024</time></article>
+    <article><div><h3>BK21 Graduate Research Fellowship</h3></div><time>2024–2025</time></article>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Service & Mentoring</h2>
+  <div class="timeline">
+    <article><div><h3>SNU Golbaengi School</h3><p>Volunteer caregiver for children with autism spectrum disorder</p></div><time>2024–Present</time></article>
+    <article><div><h3>Seoul St. Mary’s Hospital Hospice Ward</h3><p>Hospital volunteer</p></div><time>2022–2023</time></article>
+    <article><div><h3>SNU Social Responsibility / SNU PLUS</h3><p>Mentor</p></div><time>2024–2025</time></article>
+  </div>
+</section>
+
+<footer>© 2026 Seojin Kim</footer>
+</main>
+</body>
+</html>
